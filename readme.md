@@ -4,6 +4,7 @@
 
 The goal of this project is to mimic the classic arcade game "Whac-a-Mole". Different holes in the grass light up in yellow when a mole pops out of the hole. The holes are arranged in a grid that correspond to a 4x4 Keypad. The player should be able to hit the button on the keypad that corresponds to the lit up hole to earn points. That hole then deactivates and another hole activates. If the hole goes a duration of time without getting "hit", it deactivates and the game ends. The duration of time that a hole stays lit gets shorter and shorter the longer the player plays the game.
 
+![Flow chart showing game's loop](https://i.ibb.co/nPd711H/Screenshot-2024-12-16-004100.png)
 
 ## Necessary Hardware
 - Nexys A7-100T FPGA Board
