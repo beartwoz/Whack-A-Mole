@@ -33,8 +33,31 @@ The goal of this project is to mimic the classic arcade game "Whac-a-Mole". Diff
 
 ![Alt Text](https://i.ibb.co/hCZn07C/gif-02.gif)
 
+## Inputs and Outputs
+
+*x_pos, y_pos* integer inputs in ball_moles.vhd determine the X and Y coordinate of each hole's top left corner.
+
+*active* STD_LOGIC input in ball_moles.vhd determines the active state of the hole
+
+*KB_col* STD_LOGIC_VECTOR output in vga_top_holes.vhd determines the keypad column pins
+
+*KB_row* STD_LOGIC_VECTOR input in vga_top_holes.vhd determines the keypad row pins
+
+*SEG7_anode* STD_LOGIC_VECTOR output in vga_top_holes.vhd sends to 7-segment anode outputs
+
+*SEG7_seg* STD_LOGIC_VECTOR output in vga_top_holes.vhd sends to 7-segment segment outputs
+
+## Modules
+- ball_moles.vhd - houses the process for drawing the holes and the colors of the holes depending on whether they're active or not.
+- clk_wiz_0 and clk_wiz_0_clk_wiz - Template clocks from lab 6 that are unmodified, used to control the clock
+- keypad.vhd - template from hexcalculator that is used to determine which key was pressed and send that signal to vga_top_holes.vhd
+- leddec16.vhd - template for 7-segment display used to show score on the board
+- master.xdc - contraints file used to determine the pins
+- vga_sync.vhd - template for the vga display timing
+- vga_top_holes.vhd - connects the whole project together by comparing the keypad input to the current active hole
+
 ## Modifications
-This project originally uses code from Lab 3, the bouncing ball lab, and Lab 4, the hexidecimal calculator lab. 
+This project originally uses code from Lab 3, the bouncing ball lab, and Lab 4, the hexidecimal calculator lab.
 
 ## 4x4 Hole Grid
 
